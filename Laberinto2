@@ -1,5 +1,5 @@
-
 import turtle
+import pygame
 
 usuario = "jaimedoardo"
 contraseña = "1438"
@@ -29,13 +29,7 @@ class Player(turtle.Turtle):
         self.shape("circle")
         self.color("red")
         self.penup()
-        self.movimiento()
         self.speed(2)
-    def movimiento(self):
-        turtle.forward(90)
-        turtle.backward(270)
-        turtle.right(0)
-        turtle.left(180)
 
 niveles =[]
 nivel_1 = [
@@ -76,6 +70,38 @@ def iniciar_lab(nivel):
                 pen.stamp() 
             elif letra_x == "P":
                 player.goto(screen_x, screen_y) 
+              
+def setUp(self):
+        pygame.display.init()
+        #fastevent.init()
+        event.clear()
+        self.assert_(not event.get())
+              
+                
+while Pen:
+    #reloj.tic(60)
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            Pen = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                Pen = False
+            if event.key == pygame.K_RIGHT:
+                Player += 10
+            if event.key == pygame.K_LEFT:
+                Player -= 10
+            if event.key == pygame.K_DOWN:
+                Player += 10
+            if event.key == pygame.K_UP:
+                Player -= 10
+                
+
+pen = Pen() 
+player = Player() 
+iniciar_lab(niveles[0])
+
+wn.mainloop() 
 
 pen = Pen() 
 player = Player() 
